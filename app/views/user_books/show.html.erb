@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Percent read:</strong>
+  <%= @user_book.percent_read %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @user_book.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @user_book.end_date %>
+</p>
+
+<p>
+  <strong>Total reading time:</strong>
+  <%= @user_book.total_reading_time %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @user_book.finished %>
+</p>
+
+<%= link_to 'Edit', edit_user_book_path(@user_book) %> |
+<%= link_to 'Back', user_books_path %>
