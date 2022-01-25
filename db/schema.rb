@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_165844) do
+ActiveRecord::Schema.define(version: 2022_01_25_171023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 2022_01_25_165844) do
     t.integer "page_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "isbn"
+    t.string "publish_date"
+    t.boolean "series"
+    t.integer "series_number"
+    t.string "summary"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -48,6 +53,8 @@ ActiveRecord::Schema.define(version: 2022_01_25_165844) do
     t.boolean "finished"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "rating"
+    t.string "format"
   end
 
 end
