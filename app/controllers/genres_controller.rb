@@ -29,7 +29,7 @@ class GenresController < ApplicationController
         format.json { render :show, status: :created, location: @genre }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @genre.errors, status: :unprocessable_entity }
+        format.json { render json: @genre.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -42,7 +42,7 @@ class GenresController < ApplicationController
         format.json { render :show, status: :ok, location: @genre }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @genre.errors, status: :unprocessable_entity }
+        format.json { render json: @genre.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end

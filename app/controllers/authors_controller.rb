@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
         format.json { render :show, status: :created, location: @author }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @author.errors, status: :unprocessable_entity }
+        format.json { render json: @author.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -42,7 +42,7 @@ class AuthorsController < ApplicationController
         format.json { render :show, status: :ok, location: @author }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @author.errors, status: :unprocessable_entity }
+        format.json { render json: @author.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end

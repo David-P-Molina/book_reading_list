@@ -29,7 +29,7 @@ class UserBooksController < ApplicationController
         format.json { render :show, status: :created, location: @user_book }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user_book.errors, status: :unprocessable_entity }
+        format.json { render json: @user_book.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -42,7 +42,7 @@ class UserBooksController < ApplicationController
         format.json { render :show, status: :ok, location: @user_book }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user_book.errors, status: :unprocessable_entity }
+        format.json { render json: @user_book.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
