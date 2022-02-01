@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_203131) do
+ActiveRecord::Schema.define(version: 2022_01_27_203354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_203131) do
     t.string "format"
     t.bigint "user_id", null: false
     t.bigint "book_id", null: false
+    t.boolean "want_to_read"
     t.index ["book_id"], name: "index_user_books_on_book_id"
     t.index ["user_id"], name: "index_user_books_on_user_id"
   end

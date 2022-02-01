@@ -21,6 +21,16 @@
     <%= form.text_area :biography %>
   </div>
 
+  <div class="field">
+    <%= form.label :birth_date %>
+    <%= form.date :birth_date%>
+  </div>
+
+  <div class="field">
+    <%= form.label :death_date %>
+    <%= form.date :death_date%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
