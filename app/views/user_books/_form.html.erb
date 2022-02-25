@@ -44,6 +44,16 @@
     <%= form.number_field :rating, max: 5 %>
   </div>
 
+  <div class="field">
+    <%= form.label :format %>
+     <%= f.select :from, [ 'Hard-Cover','Soft-Cover','eBook', 'Audio Book' ], :prompt => 'Select One' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :want_to_read %>
+    <%= form.check_box :want_to_read %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
