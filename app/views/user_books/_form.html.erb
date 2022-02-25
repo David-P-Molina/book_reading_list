@@ -39,6 +39,11 @@
     <%= form.check_box :finished %>
   </div>
 
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating, max: 5 %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
